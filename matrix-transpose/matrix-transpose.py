@@ -23,6 +23,7 @@ def matrix_transpose(A):
     # 6. Return the finished matrix AFTER all loops are done
     return At
 
+#or you can just do : return np.array(A).T
 
 """
 WHY WE USE TRANSPOSE:
