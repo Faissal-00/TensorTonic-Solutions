@@ -12,3 +12,7 @@ def color_to_grayscale(image):
             row.append(y)
         grayscale_list.append(row)    
     return grayscale_list 
+    # return np.dot(img, [0.299, 0.587, 0.114]).tolist()
+    
+
+
