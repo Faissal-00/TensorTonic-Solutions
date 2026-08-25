@@ -36,7 +36,7 @@ class SimpleTokenizer:
         for sentence in texts :
             sentence=sentence.lower().split()
             items.extend(sentence)
-        unique_sorted_items = sorted(list(dict.fromkeys(items)))
+        unique_sorted_items = sorted(list(dict.fromkeys(items))) #sort and remove duplicates
         counter=4    
         for item in unique_sorted_items:
             self.word_to_id[item] = counter
