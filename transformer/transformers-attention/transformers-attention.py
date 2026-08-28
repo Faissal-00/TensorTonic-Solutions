@@ -8,6 +8,8 @@ def scaled_dot_product_attention(Q: torch.Tensor, K: torch.Tensor, V: torch.Tens
     """
     d_k = K.shape[-1]
     Kt = K.transpose (-2, -1)
-    fraction = Q@Kt / math.sqrt(d_k)
-    attention = F.softmax(fraction, dim=-1)@V
-    return attention
+    scores =  Q@Kt
+    scaled_scores = scores / math.sqrt(d_k)
+    attention_weights = F.softmax(scaled_scores, dim=-1)
+    output = attention_weights@V
+    return output
