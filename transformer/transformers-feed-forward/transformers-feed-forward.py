@@ -9,3 +9,5 @@ def feed_forward(x: np.ndarray, W1: np.ndarray, b1: np.ndarray,
     relu_out=np.maximum(0,hidden)
     output = relu_out@W2 + b2 
     return output
+
+    # x@W= (batch_size, seq_len, d_model) * (d_model, d_ff) = seq_len, d_ff
