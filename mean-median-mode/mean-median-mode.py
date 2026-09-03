@@ -11,6 +11,7 @@ def mean_median_mode(x: list) -> dict:
 
     vals, counts = np.unique(x,return_counts=True)
     mode_index = np.argmax(counts)
+    
     Dictio['mode']=float(vals[mode_index]) 
     
     return Dictio
