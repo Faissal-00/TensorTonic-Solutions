@@ -15,14 +15,14 @@ def matrix_inverse(A: list) -> np.ndarray | None:
             return None
         # Swap the rows
         matrix[[i, row_max]] = matrix[[row_max, i]]
+        ## Scale the pivot row to 1
         pivot = matrix[i, i]
         matrix[i] = matrix[i] / pivot
-
-        for j in range(n):
+        # Eliminate other rows
+        for j in range(n): 
             if j == i:
                 continue
             multiplier = matrix[j][i] 
             matrix[j] = matrix[j] - (multiplier * matrix[i])
-            
     inverse = matrix [:,n:] 
     return inverse
