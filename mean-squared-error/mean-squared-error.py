@@ -7,5 +7,8 @@ def mean_squared_error(y_pred: list, y_true: list) -> float:
     y_pred = np.array(y_pred, dtype=float)
     y_true = np.array(y_true, dtype=float)
     N = len(y_pred)
-    mse = ((y_pred-y_true)**2)/N
-    return sum(mse)
+
+    mse = (y_pred - y_true) ** 2
+    # return np.sum(mse) / N
+    return float(np.mean(mse))
+
