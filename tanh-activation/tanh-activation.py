@@ -9,3 +9,5 @@ def tanh(x: list) -> np.ndarray:
     e__x=np.exp(-X)
     tanhx=(e_x-e__x)/(e_x+e__x)
     return tanhx
+    
+    # return np.tanh(np.array(x))
