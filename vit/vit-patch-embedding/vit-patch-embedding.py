@@ -15,7 +15,6 @@ def patch_embed(image: np.ndarray, patch_size: int,
     image = image[:, :valid_H, :valid_W, :]
     
     xp = []    
-    
     # Extract and flatten patches
     for b in range(Batch):
         for y in range(0, valid_H, P): 
